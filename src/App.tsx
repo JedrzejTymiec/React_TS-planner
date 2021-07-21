@@ -3,6 +3,11 @@ import { daysActions } from './state';
 import { optionsActions } from './state';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
+//Style
+import { GlobalStyle, theme } from './App.styles';
+import { ThemeProvider } from 'styled-components';
+//Components
+import Navbar from './components/Navbar/Navbar';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -15,7 +20,14 @@ const App = () => {
     getOptions();
   }, [getData, getOptions]);
 
-  return <div>HELLO</div>;
+  return (
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <Navbar />
+      </ThemeProvider>
+    </>
+  );
 };
 
 export default App;
