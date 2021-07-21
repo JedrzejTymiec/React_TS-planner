@@ -1,6 +1,8 @@
+import { Wrapper } from './Navigation.styles';
+
 const Navigation = () => {
   return (
-    <div>
+    <Wrapper>
       <ul>
         <li>
           DASHBOARD<div className="dash"></div>
@@ -12,7 +14,7 @@ const Navigation = () => {
           CHALLENGE<div className="dash"></div>
         </li>
       </ul>
-    </div>
+    </Wrapper>
   );
 };
 
