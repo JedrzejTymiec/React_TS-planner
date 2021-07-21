@@ -1,0 +1,7 @@
+{
+  "vegetables": true,
+  "cheese": true,
+  "meat": true,
+  "fish": false,
+  "chicken": false
+}
