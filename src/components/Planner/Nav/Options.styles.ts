@@ -18,6 +18,11 @@ export const OptionsWrapper = styled.div`
 
     > div {
       position: relative;
+      margin: 0 0.5rem;
+      width: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .strikethrough {
         height: 2px;
@@ -25,13 +30,12 @@ export const OptionsWrapper = styled.div`
         background-color: #d3d3d3;
         transform: rotate(-45deg);
         position: absolute;
-        top: 50%;
-        display: none;
+        top: 45%;
+        display: block;
       }
 
       svg {
         height: 1.5rem;
-        margin: 0 0.5rem;
         cursor: pointer;
         transition: transform 0.2s ease;
 
