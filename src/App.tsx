@@ -8,23 +8,25 @@ import { GlobalStyle, theme } from './App.styles';
 import { ThemeProvider } from 'styled-components';
 //Components
 import Navbar from './components/Navbar/Navbar';
+import Planner from './components/Planner/Planner';
 
 const App = () => {
   const dispatch = useDispatch();
 
-  const { getData } = bindActionCreators(daysActions, dispatch);
-  const { getOptions } = bindActionCreators(optionsActions, dispatch);
+  const { setData } = bindActionCreators(daysActions, dispatch);
+  const { setOptions } = bindActionCreators(optionsActions, dispatch);
 
   useEffect(() => {
-    getData();
-    getOptions();
-  }, [getData, getOptions]);
+    setData();
+    setOptions();
+  }, [setData, setOptions]);
 
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Navbar />
+        <Planner />
       </ThemeProvider>
     </>
   );

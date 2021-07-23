@@ -1,7 +1,7 @@
 import { ActionType } from './actionTypes';
 
 export interface GetData {
-  type: ActionType.GET_DATA;
+  type: ActionType.SET_DATA;
   payload: Data;
 }
 

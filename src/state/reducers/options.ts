@@ -4,7 +4,7 @@ const initialState = {};
 
 const optionsReducer = (state: any = initialState, { type, payload }: any) => {
   switch (type) {
-    case ActionType.GET_OPTIONS:
+    case ActionType.SET_OPTIONS:
       return { ...state, options: payload };
     default:
       return state;

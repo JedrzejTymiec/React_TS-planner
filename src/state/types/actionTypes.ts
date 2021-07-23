@@ -1,4 +1,4 @@
 export enum ActionType {
-  GET_DATA = 'GET_DATA',
-  GET_OPTIONS = 'GET_OPTIONS',
+  SET_DATA = 'SET_DATA',
+  SET_OPTIONS = 'SET_OPTIONS',
 }

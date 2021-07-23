@@ -3,7 +3,7 @@ import { Wrapper } from './Navbar.styles';
 import Navigation from './Navigation';
 import User from './User';
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <Wrapper>
       <div className="container">

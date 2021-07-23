@@ -8,7 +8,7 @@ const daysReducer = (
   { type, payload }: DaysAction,
 ) => {
   switch (type) {
-    case ActionType.GET_DATA:
+    case ActionType.SET_DATA:
       return { ...state, days: payload };
     default:
       return state;

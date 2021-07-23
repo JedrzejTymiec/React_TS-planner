@@ -1,6 +1,6 @@
 import { Wrapper } from './Navigation.styles';
 
-const Navigation = () => {
+const Navigation: React.FC = () => {
   return (
     <Wrapper>
       <ul>
