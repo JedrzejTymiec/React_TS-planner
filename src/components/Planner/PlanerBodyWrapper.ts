@@ -28,7 +28,7 @@ export const PlannerBodyWrapper = styled.div`
 
       &:last-child {
         background-color: #eaeaea;
-        height: 66px !important;
+        height: 64px !important;
         color: ${(props) => props.theme.font};
         border-radius: 0 0 7px 0;
         border-left: 2px solid transparent;

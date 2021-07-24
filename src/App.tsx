@@ -9,6 +9,7 @@ import { ThemeProvider } from 'styled-components';
 //Components
 import Navbar from './components/Navbar/Navbar';
 import Planner from './components/Planner/Planner';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Navbar />
         <Planner />
+        <Footer />
       </ThemeProvider>
     </>
   );
