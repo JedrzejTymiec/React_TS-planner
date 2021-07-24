@@ -21,4 +21,5 @@ export const theme = {
   whiteBgBorder: '#e9e9e9',
   greyBgBorder: '#d0d0d0',
   font: '#828282',
+  greyFont: '#c2c2c2',
 };

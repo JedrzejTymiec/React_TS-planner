@@ -5,6 +5,8 @@ export const WeekWrapper = styled.div`
 
   .day {
     flex: 1;
+    cursor: pointer;
+
     .day-number {
       color: ${(props) => props.theme.orange};
       text-transform: uppercase;
@@ -43,5 +45,15 @@ export const WeekWrapper = styled.div`
         margin-left: 5px;
       }
     }
+  }
+
+  .day.active {
+    border: 2px solid ${(props) => props.theme.orange};
+    color: #000;
+  }
+
+  .cheat-day.active p,
+  .cheat-day.active svg {
+    color: #000;
   }
 `;

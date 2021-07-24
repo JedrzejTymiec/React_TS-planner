@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Day } from '../../state/types/days';
 import MealComponent from './Meal';
 import Dumbell from '../SVGComponents/Dumbell';
@@ -12,10 +12,14 @@ import { State } from '../../state/reducers';
 type Props = {
   day: Day;
   currentWeek: number;
+  toggle: (id: number) => void;
+  active: boolean;
 };
 
 const DayComponent: React.FC<Props> = ({
   currentWeek,
+  toggle,
+  active,
   day: { meals, training, carb, id },
 }) => {
   const dispatch = useDispatch();
@@ -26,8 +30,9 @@ const DayComponent: React.FC<Props> = ({
     days[id - 1].training = !days[id - 1].training;
     newData(days);
   };
+
   return (
-    <div className="day">
+    <div className={active ? 'day active' : 'day'} onClick={() => toggle(id)}>
       <div className="day-number">
         <span>Day {id + (currentWeek - 1) * 7}</span>
       </div>

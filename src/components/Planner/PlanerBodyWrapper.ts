@@ -5,6 +5,7 @@ export const PlannerBodyWrapper = styled.div`
   height: 580px;
   background-color: ${(props) => props.theme.darkBg};
   border-radius: 7px;
+  color: ${(props) => props.theme.greyFont};
 
   .day-number,
   .cheat-day {
@@ -38,7 +39,7 @@ export const PlannerBodyWrapper = styled.div`
       .cheat-day-text {
         writing-mode: vertical-rl;
         background-color: #fff;
-        color: #c2c2c2;
+        color: ${(props) => props.theme.greyFont};
         width: 100%;
         height: 100% !important;
         display: flex;
