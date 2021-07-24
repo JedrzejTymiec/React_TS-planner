@@ -31,18 +31,24 @@ const DayComponent: React.FC<Props> = ({
     newData(days);
   };
 
+  const toggleMeal = (mealId: number) => {
+    days[id - 1].meals[mealId - 5 * (id - 1) - 1].eaten =
+      !days[id - 1].meals[mealId - 5 * (id - 1) - 1].eaten;
+    newData(days);
+  };
+
   return (
     <div className={active ? 'day active' : 'day'} onClick={() => toggle(id)}>
       <div className="day-number">
         <span>Day {id + (currentWeek - 1) * 7}</span>
       </div>
       {meals.map((meal) => (
-        <MealComponent key={meal.id} meal={meal} />
+        <MealComponent key={meal.id} meal={meal} toggle={toggleMeal} />
       ))}
       <div>
         <span>{carb}-carb</span>
       </div>
-      <div onClick={toggleTrainig}>
+      <div onDoubleClick={toggleTrainig}>
         <Dumbell training={training} />
         {training && <FontAwesomeIcon icon={faCheck} color="#ff801a" />}
       </div>

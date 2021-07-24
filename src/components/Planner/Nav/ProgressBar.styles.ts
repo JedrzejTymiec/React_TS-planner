@@ -28,7 +28,7 @@ export const ProgressWrapper = styled.div`
       height: 2px;
       width: 110px;
       background-color: #000;
-      background-color: ${(props) => props.theme.orange};
+      background-color: ${(props) => props.theme.green};
       position: absolute;
       top: 10px;
       left: 5px;
@@ -62,8 +62,8 @@ export const ProgressWrapper = styled.div`
         }
 
         &.done {
-          background-color: ${(props) => props.theme.orange};
-          border-color: ${(props) => props.theme.orange};
+          background-color: ${(props) => props.theme.green};
+          border-color: ${(props) => props.theme.green};
         }
       }
 

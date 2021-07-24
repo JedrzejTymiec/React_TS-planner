@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../App.styles';
 
 export const WeekWrapper = styled.div`
   display: flex;
@@ -8,14 +9,17 @@ export const WeekWrapper = styled.div`
     cursor: pointer;
 
     .day-number {
-      color: ${(props) => props.theme.orange};
+      color: ${(props) => props.theme.green};
       text-transform: uppercase;
       font-size: 1.3rem;
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
     }
 
     > div:nth-child(7) {
       border-color: ${(props) => props.theme.greyBgBorder};
       border-right: 2px solid ${(props) => props.theme.greyBgBorder};
+      border-left: 2px solid transparent;
       color: ${(props) => props.theme.font};
       text-transform: uppercase;
       font-size: 11px;
@@ -26,6 +30,8 @@ export const WeekWrapper = styled.div`
 
     > div:nth-child(8) {
       border-right: 2px solid ${(props) => props.theme.greyBgBorder};
+      border-left: 2px solid transparent;
+      border-bottom: 2px solid transparent;
       color: ${(props) => props.theme.font};
       display: flex;
       justify-content: center;
@@ -48,12 +54,27 @@ export const WeekWrapper = styled.div`
   }
 
   .day.active {
-    border: 2px solid ${(props) => props.theme.orange};
     color: #000;
+
+    .day-number {
+      border-top-color: ${(props) => props.theme.orange};
+      border-left-color: ${(props) => props.theme.orange};
+      border-right-color: ${(props) => props.theme.orange} !important;
+      color: ${(props) => props.theme.orange};
+    }
+
+    > div {
+      border-left-color: ${(props) => props.theme.orange} !important;
+      border-right-color: ${(props) => props.theme.orange} !important;
+
+      &:last-child {
+        border-bottom-color: ${(props) => props.theme.orange};
+      }
+    }
   }
 
   .cheat-day.active p,
-  .cheat-day.active svg {
+  .cheat-day.active div:nth-child(2) svg {
     color: #000;
   }
 `;

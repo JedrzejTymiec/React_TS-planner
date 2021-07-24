@@ -17,18 +17,22 @@ export const PlannerBodyWrapper = styled.div`
     div {
       &:first-child {
         height: 50px;
-        border-right: none !important;
+        border-right-color: transparent !important;
       }
 
       &:nth-child(2) {
         height: 458px;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
       }
 
       &:last-child {
         background-color: #eaeaea;
-        height: 68px !important;
+        height: 66px !important;
         color: ${(props) => props.theme.font};
         border-radius: 0 0 7px 0;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
 
         svg {
           height: 30px;
@@ -80,8 +84,8 @@ export const PlannerBodyWrapper = styled.div`
       }
 
       &:last-child {
-        height: 33px;
-        border-bottom: none;
+        height: 31px;
+        border-bottom: 2px solid transparent;
       }
 
       p {
@@ -96,6 +100,7 @@ export const PlannerBodyWrapper = styled.div`
 
     &:first-child {
       border-color: transparent;
+      border-top: 2px solid transparent;
     }
 
     span {
