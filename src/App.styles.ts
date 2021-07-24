@@ -22,4 +22,5 @@ export const theme = {
   greyBgBorder: '#d0d0d0',
   font: '#828282',
   greyFont: '#c2c2c2',
+  green: '#adbb0c',
 };
