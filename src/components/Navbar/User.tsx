@@ -1,7 +1,8 @@
 import Gravatar from 'react-gravatar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import { Wrapper } from './User.styles';
+//Styles
+import { Wrapper } from './style/User.styles';
 
 const User: React.FC = () => {
   return (

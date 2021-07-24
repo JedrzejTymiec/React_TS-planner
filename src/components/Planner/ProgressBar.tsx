@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-
-import { ProgressWrapper } from './ProgressBar.styles';
+//Styles
+import { ProgressWrapper } from './style/ProgressBar.styles';
 
 type Props = {
   currentWeek: number;

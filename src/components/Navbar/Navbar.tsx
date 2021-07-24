@@ -1,4 +1,5 @@
-import { Wrapper } from './Navbar.styles';
+//Styles
+import { Wrapper } from './style/Navbar.styles';
 //Components
 import Navigation from './Navigation';
 import User from './User';

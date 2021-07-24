@@ -1,14 +1,15 @@
-import { OptionsWrapper } from './Options.styles';
 import { useSelector, useDispatch } from 'react-redux';
-import { State } from '../../../state/reducers';
+import { State } from '../../state/reducers';
 import { bindActionCreators } from 'redux';
-import { optionsActions } from '../../../state';
+import { optionsActions } from '../../state';
 //Components
-import Broccoli from '../../SVGComponents/Broccoli';
-import Cheese from '../../SVGComponents/Cheese';
-import Meat from '../../SVGComponents/Meat';
-import Fish from '../../SVGComponents/Fish';
-import Chicken from '../../SVGComponents/Chicken';
+import Broccoli from '../SVGComponents/Broccoli';
+import Cheese from '../SVGComponents/Cheese';
+import Meat from '../SVGComponents/Meat';
+import Fish from '../SVGComponents/Fish';
+import Chicken from '../SVGComponents/Chicken';
+//Styles
+import { OptionsWrapper } from './style/Options.styles';
 
 export type Toggle = () => void;
 

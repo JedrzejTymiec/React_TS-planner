@@ -1,12 +1,14 @@
-import NavContainer from './Nav/NavContainer';
-import { PlannerWrapper } from './Planner.styles';
-import { PlannerBodyWrapper } from './PlanerBodyWrapper';
-import Week from './Week';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { State } from '../../state/reducers';
-import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+//Components
+import NavContainer from './NavContainer';
+import Week from './Week';
+//Styles
+import { PlannerWrapper } from './style/Planner.styles';
+import { HoursWrapper } from './style/Hours.styles';
 
 const Planner = () => {
   const [week, setWeek] = useState<number>(7);
@@ -15,8 +17,8 @@ const Planner = () => {
   return (
     <PlannerWrapper>
       <NavContainer week={week} setWeek={setWeek} />
-      <PlannerBodyWrapper>
-        <div className="hours">
+      <div className="body">
+        <HoursWrapper>
           <div></div>
           <div>
             <p>
@@ -48,9 +50,9 @@ const Planner = () => {
             <p>Workout</p>
             <FontAwesomeIcon icon={faCaretRight} />
           </div>
-        </div>
+        </HoursWrapper>
         <Week days={days} currentWeek={week} />
-      </PlannerBodyWrapper>
+      </div>
     </PlannerWrapper>
   );
 };

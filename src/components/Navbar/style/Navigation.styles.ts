@@ -28,6 +28,10 @@ export const Wrapper = styled.div`
       padding: 10px 5px;
     }
 
+    li {
+      cursor: pointer;
+    }
+
     li:first-child {
       color: ${(props) => props.theme.orange};
 

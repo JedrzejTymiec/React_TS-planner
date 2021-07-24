@@ -1,4 +1,4 @@
-const Printer = () => {
+const Printer: React.FC = () => {
   return (
     <svg
       version="1.0"

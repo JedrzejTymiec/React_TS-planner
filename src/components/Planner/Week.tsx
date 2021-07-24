@@ -1,10 +1,14 @@
 import { useState } from 'react';
-import { Day } from '../../state/types/days';
-import DayComponent from './Day';
-import { WeekWrapper } from './Week.styles';
-import Printer from '../SVGComponents/Printer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGrin } from '@fortawesome/free-regular-svg-icons';
+//Types
+import { Day } from '../../state/types/days';
+//Components
+import DayComponent from './Day';
+import Printer from '../SVGComponents/Printer';
+//Styles
+import { WeekWrapper } from './style/Week.styles';
+import { CheatDay } from './style/CheatDay.styles';
 
 type Props = {
   days: Day[];
@@ -61,10 +65,12 @@ const Week: React.FC<Props> = ({ days, currentWeek }) => {
           active={active[day.id - 1]}
         />
       ))}
-      <div
+      <CheatDay
         className={active[6] ? 'day cheat-day active' : 'day cheat-day'}
         onClick={() => toggleActive(7)}>
-        <div className="day-number">Day {7 + (currentWeek - 1) * 7}</div>
+        <div className="day-number">
+          <span>Day {7 + (currentWeek - 1) * 7}</span>
+        </div>
         <div>
           <div className="cheat-day-text">
             <p>GUILT-FREE DAY</p>
@@ -74,7 +80,7 @@ const Week: React.FC<Props> = ({ days, currentWeek }) => {
         <div>
           <Printer /> Print
         </div>
-      </div>
+      </CheatDay>
     </WeekWrapper>
   );
 };

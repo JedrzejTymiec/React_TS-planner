@@ -1,7 +1,10 @@
 import React from 'react';
+//Types
 import { Meal } from '../../state/types/days';
-import { MealWrapper } from './Meal.styles';
+//Components
 import CheckMeal from '../SVGComponents/CheckMeal';
+//Styles
+import { MealWrapper } from './style/Meal.styles';
 
 type Props = {
   meal: Meal;

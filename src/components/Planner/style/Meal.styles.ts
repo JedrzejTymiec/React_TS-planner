@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const MealWrapper = styled.div`
+  height: 90px;
   background-color: #fff;
   border-right: 2px solid ${(props) => props.theme.whiteBgBorder};
   border-left: 2px solid #fff !important;

@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
-import { Day } from '../../state/types/days';
-import MealComponent from './Meal';
-import Dumbell from '../SVGComponents/Dumbell';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { daysActions } from '../../state';
 import { State } from '../../state/reducers';
+//types
+import { Day } from '../../state/types/days';
+//Components
+import MealComponent from './Meal';
+import Dumbell from '../SVGComponents/Dumbell';
+//Styles
+import { DayWrapper } from './style/Day.styles';
 
 type Props = {
   day: Day;
@@ -38,7 +42,9 @@ const DayComponent: React.FC<Props> = ({
   };
 
   return (
-    <div className={active ? 'day active' : 'day'} onClick={() => toggle(id)}>
+    <DayWrapper
+      className={active ? 'day active' : 'day'}
+      onClick={() => toggle(id)}>
       <div className="day-number">
         <span>Day {id + (currentWeek - 1) * 7}</span>
       </div>
@@ -52,7 +58,7 @@ const DayComponent: React.FC<Props> = ({
         <Dumbell training={training} />
         {training && <FontAwesomeIcon icon={faCheck} color="#ff801a" />}
       </div>
-    </div>
+    </DayWrapper>
   );
 };
 

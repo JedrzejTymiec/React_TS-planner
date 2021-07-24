@@ -1,4 +1,4 @@
-import { Wrapper } from './Navigation.styles';
+import { Wrapper } from './style/Navigation.styles';
 
 const Navigation: React.FC = () => {
   return (

@@ -1,4 +1,4 @@
-const CheckMeal = () => {
+const CheckMeal: React.FC = () => {
   return (
     <svg
       version="1.0"

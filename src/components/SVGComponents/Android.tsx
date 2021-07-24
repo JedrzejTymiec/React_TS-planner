@@ -1,4 +1,4 @@
-const Android = () => {
+const Android: React.FC = () => {
   return (
     <svg
       version="1.0"

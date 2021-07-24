@@ -1,5 +1,5 @@
 import React from 'react';
-import { Toggle } from '../Planner/Nav/Options';
+import { Toggle } from '../Planner/Options';
 
 type Props = {
   selected: boolean;
@@ -15,9 +15,6 @@ const Meat: React.FC<Props> = ({ selected, toggle }) => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 300.000000 240.000000"
         preserveAspectRatio="xMidYMid meet">
-        <metadata>
-          Created by potrace 1.10, written by Peter Selinger 2001-2011
-        </metadata>
         <g
           transform="translate(0.000000,240.000000) scale(0.050000,-0.050000)"
           stroke="none"

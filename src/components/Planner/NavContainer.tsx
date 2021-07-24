@@ -1,9 +1,10 @@
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 //Components
 import ProgressBar from './ProgressBar';
 import Navigation from './Navigation';
-import { NavContainerWrapper } from './NavContainer.styles';
 import Options from './Options';
+//Style
+import { NavContainerWrapper } from './style/NavContainer.styles';
 
 export type ClickHandler = () => void;
 type Props = {
