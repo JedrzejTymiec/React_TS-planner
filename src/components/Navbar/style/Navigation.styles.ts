@@ -29,30 +29,43 @@ export const Wrapper = styled.div`
     }
 
     li {
-      cursor: pointer;
-    }
-
-    li:first-child {
-      color: ${(props) => props.theme.orange};
-
-      .dash {
-        background-color: ${(props) => props.theme.orange};
-      }
-    }
-
-    li {
       font-weight: 700;
+      cursor: pointer;
       position: relative;
 
+      a {
+        color: ${(props) => props.theme.font};
+        text-decoration: none;
+        display: inline-block;
+      }
+
       .dash {
-        width: 25px;
-        margin: auto;
-        height: 2px;
-        background-color: #fff;
         position: absolute;
-        bottom: -8px;
+        bottom: -10px;
+        height: 2px;
+        width: 0;
+        background: ${(props) => props.theme.font};
         left: 50%;
-        transform: translateX(-50%);
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      }
+
+      &:hover {
+        .dash {
+          left: 33%;
+          width: 33%;
+        }
+      }
+
+      &.active {
+        a {
+          color: ${(props) => props.theme.orange};
+        }
+
+        .dash {
+          width: 33%;
+          left: 33%;
+          background: ${(props) => props.theme.orange};
+        }
       }
     }
   }

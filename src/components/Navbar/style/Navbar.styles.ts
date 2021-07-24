@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   color: ${(props) => props.theme.font};
-  border-bottom: 1px solid ${(props) => props.theme.border};
   -webkit-box-shadow: 0px 2px 3px -3px rgba(225, 225, 225, 1);
   -moz-box-shadow: 0px 2px 3px -3px rgba(225, 225, 225, 1);
   box-shadow: 0px 3px 3px -3px rgba(225, 225, 225, 1);
