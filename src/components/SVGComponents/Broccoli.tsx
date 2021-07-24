@@ -1,5 +1,5 @@
 import React from 'react';
-import { Toggle } from '../Options';
+import { Toggle } from '../Planner/Nav/Options';
 
 type Props = {
   selected: boolean;

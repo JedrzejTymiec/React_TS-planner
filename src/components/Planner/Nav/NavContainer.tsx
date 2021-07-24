@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 //Components
 import ProgressBar from './ProgressBar';
 import Navigation from './Navigation';
@@ -6,10 +6,12 @@ import { NavContainerWrapper } from './NavContainer.styles';
 import Options from './Options';
 
 export type ClickHandler = () => void;
+type Props = {
+  week: number;
+  setWeek: Dispatch<SetStateAction<number>>;
+};
 
-const NavContainer: React.FC = () => {
-  const [week, setWeek] = useState<number>(4);
-
+const NavContainer: React.FC<Props> = ({ week, setWeek }) => {
   const nextWeek: ClickHandler = () => {
     week < 12 && setWeek((current) => current + 1);
   };

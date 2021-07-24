@@ -15,8 +15,10 @@ export const GlobalStyle = createGlobalStyle`
 
 export const theme = {
   appBg: '#f9f9f9',
+  darkBg: '#eaeaea',
   orange: '#ff801a',
   grey: '#eee',
-  border: '#e9e9e9',
+  whiteBgBorder: '#e9e9e9',
+  greyBgBorder: '#d0d0d0',
   font: '#828282',
 };

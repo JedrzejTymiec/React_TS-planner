@@ -4,11 +4,11 @@ import { State } from '../../../state/reducers';
 import { bindActionCreators } from 'redux';
 import { optionsActions } from '../../../state';
 //Components
-import Broccoli from './OptionsIcons/Broccoli';
-import Cheese from './OptionsIcons/Cheese';
-import Meat from './OptionsIcons/Meat';
-import Fish from './OptionsIcons/Fish';
-import Chicken from './OptionsIcons/Chicken';
+import Broccoli from '../../SVGComponents/Broccoli';
+import Cheese from '../../SVGComponents/Cheese';
+import Meat from '../../SVGComponents/Meat';
+import Fish from '../../SVGComponents/Fish';
+import Chicken from '../../SVGComponents/Chicken';
 
 export type Toggle = () => void;
 

@@ -13,11 +13,13 @@ export interface Day {
   meals: Meal[];
   training: boolean;
   carb: string;
+  id: number;
 }
 
 export interface Meal {
   name: string;
   eaten: boolean;
+  id: number;
 }
 
 export type DaysAction = GetData;
