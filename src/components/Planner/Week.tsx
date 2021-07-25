@@ -69,7 +69,8 @@ const Week: React.FC<Props> = ({ days, currentWeek }) => {
         className={active[6] ? 'day cheat-day active' : 'day cheat-day'}
         onClick={() => toggleActive(7)}>
         <div className="day-number">
-          <span>Day {7 + (currentWeek - 1) * 7}</span>
+          <span className="day">Day </span>
+          <span className="number">{7 + (currentWeek - 1) * 7}</span>
         </div>
         <div>
           <div className="cheat-day-text">

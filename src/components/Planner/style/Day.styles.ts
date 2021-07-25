@@ -13,6 +13,10 @@ export const DayWrapper = styled.div`
     border-left: 2px solid transparent;
     height: 50px;
     border-right: 2px solid ${(props) => props.theme.whiteBgBorder};
+
+    .day {
+      margin-right: 5px;
+    }
   }
 
   > div {

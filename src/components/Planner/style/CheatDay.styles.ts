@@ -22,6 +22,10 @@ export const CheatDay = styled.div`
       align-items: center;
       border-bottom: 2px solid ${(props) => props.theme.whiteBgBorder};
       border-radius: 0 7px 0 0;
+
+      .day {
+        margin-right: 5px;
+      }
     }
 
     &:nth-child(2) {
@@ -64,14 +68,6 @@ export const CheatDay = styled.div`
       }
       svg {
         margin: 0;
-      }
-    }
-  }
-
-  @media (max-width: 880px) {
-    div {
-      &:nth-child(2) {
-        height: 508px;
       }
     }
   }

@@ -4,10 +4,6 @@ export const PlannerWrapper = styled.div`
   width: 978px;
   margin: 2rem auto;
 
-  @media (max-width: 980px) {
-    width: auto;
-  }
-
   .body {
     display: flex;
     height: 580px;
@@ -16,9 +12,19 @@ export const PlannerWrapper = styled.div`
     color: ${(props) => props.theme.greyFont};
   }
 
-  @media (max-width: 880px) {
+  @media (max-width: 980px) {
+    width: auto;
+  }
+
+  @media (max-width: 900px) {
     .body {
-      height: 630px;
+      height: 508px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .body {
+      height: 383px;
     }
   }
 `;

@@ -46,13 +46,14 @@ const DayComponent: React.FC<Props> = ({
       className={active ? 'day active' : 'day'}
       onClick={() => toggle(id)}>
       <div className="day-number">
-        <span>Day {id + (currentWeek - 1) * 7}</span>
+        <span className="day">Day </span>
+        <span className="number">{id + (currentWeek - 1) * 7}</span>
       </div>
       {meals.map((meal) => (
         <MealComponent key={meal.id} meal={meal} toggle={toggleMeal} />
       ))}
       <div>
-        <span>{carb}-carb</span>
+        <span className="carb">{carb}-carb</span>
       </div>
       <div onDoubleClick={toggleTrainig}>
         <Dumbell training={training} />

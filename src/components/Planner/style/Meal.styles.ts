@@ -10,10 +10,6 @@ export const MealWrapper = styled.div`
   align-items: flex-start !important;
   position: relative;
 
-  @media (max-width: 880px) {
-    height: 100px;
-  }
-
   p {
     margin-top: 10px !important;
   }
@@ -24,5 +20,13 @@ export const MealWrapper = styled.div`
     right: 5px;
     top: 5px;
     color: ${(props) => props.theme.orange};
+  }
+
+  @media (max-width: 900px) {
+    height: 75px;
+  }
+
+  @media (max-width: 620px) {
+    height: 50px;
   }
 `;
