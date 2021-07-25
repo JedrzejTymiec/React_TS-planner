@@ -74,4 +74,15 @@ export const ProgressWrapper = styled.div`
       }
     }
   }
+
+  @media (max-width: 780px) {
+    margin: auto;
+    width: 45%;
+    margin-left: 3%;
+  }
+
+  @media (max-width: 550px) {
+    margin: 0;
+    width: auto;
+  }
 `;

@@ -5,6 +5,7 @@ export const CheatDay = styled.div`
   background-color: #fff;
   flex: 1;
   border-radius: 0 7px 0 0;
+  cursor: pointer;
 
   div {
     &:first-child {
@@ -63,6 +64,14 @@ export const CheatDay = styled.div`
       }
       svg {
         margin: 0;
+      }
+    }
+  }
+
+  @media (max-width: 880px) {
+    div {
+      &:nth-child(2) {
+        height: 508px;
       }
     }
   }

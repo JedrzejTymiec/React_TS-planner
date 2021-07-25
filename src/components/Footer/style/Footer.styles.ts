@@ -6,6 +6,12 @@ export const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 980px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   > div {
     flex: 1;
     padding: 0 20px;
@@ -71,6 +77,64 @@ export const FooterWrapper = styled.div`
 
       &:hover {
         background-color: ${(props) => props.theme.grey};
+      }
+    }
+  }
+
+  @media (max-width: 980px) {
+    width: auto;
+    > div {
+      border-right: none;
+      padding: 10px 0;
+      width: 80%;
+      margin-right: 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid ${(props) => props.theme.greyBgBorder};
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .buttons-container {
+        flex-direction: column;
+        button {
+          justify-content: center;
+        }
+      }
+
+      button {
+        margin-right: 0;
+      }
+
+      &:first-child {
+        button {
+          min-width: 111.55px;
+        }
+      }
+
+      &:last-child {
+        button {
+          min-width: 135.55px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 880px) {
+    > div {
+      button {
+        padding: 5px 7px;
+      }
+    }
+  }
+
+  @media (max-width: 620px) {
+    > div {
+      flex-direction: column;
+
+      button {
+        justify-content: center;
       }
     }
   }

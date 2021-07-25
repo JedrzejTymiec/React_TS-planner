@@ -45,4 +45,22 @@ export const OptionsWrapper = styled.div`
       }
     }
   }
+
+  @media (max-width: 780px) {
+    justify-content: center;
+    width: 100%;
+
+    .options-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      .icons {
+        width: 100%;
+        justify-content: space-evenly;
+      }
+    }
+  }
 `;

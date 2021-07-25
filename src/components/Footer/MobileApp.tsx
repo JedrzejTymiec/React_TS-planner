@@ -6,10 +6,13 @@ import Android from '../SVGComponents/Android';
 const MobileApp = () => {
   return (
     <div>
-      <h1>Bod•ē Trainer in your poket</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, illo.
-      </p>
+      <div>
+        <h1>Bod•ē Trainer in your poket</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat,
+          illo.
+        </p>
+      </div>
       <div className="buttons-container">
         <button>
           <FontAwesomeIcon icon={faApple} className="apple" />

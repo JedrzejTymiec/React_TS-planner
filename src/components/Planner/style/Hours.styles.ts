@@ -10,6 +10,10 @@ export const HoursWrapper = styled.div`
     border-color: ${(props) => props.theme.greyBgBorder};
     color: ${(props) => props.theme.font};
 
+    @media (max-width: 880px) {
+      height: 100px;
+    }
+
     &:first-child {
       border-color: transparent;
       border-top: 2px solid transparent;

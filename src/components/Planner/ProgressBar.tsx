@@ -17,13 +17,13 @@ const ProgressBar: React.FC<Props> = ({ currentWeek }) => {
 
   useEffect(() => {
     if (circles.length) {
-      // circles.forEach((circle, nr) => {
-      //   nr < currentWeek
-      //     ? circle.classList.add('done')
-      //     : circle.classList.remove('done');
-      // });
-      // const progress: HTMLElement | null = document.getElementById('progress');
-      // progress!.style.width = (currentWeek - 1) * 22 + 'px';
+      circles.forEach((circle, nr) => {
+        nr < currentWeek
+          ? circle.classList.add('done')
+          : circle.classList.remove('done');
+      });
+      const progress: HTMLElement | null = document.getElementById('progress');
+      progress!.style.width = (currentWeek - 1) * 22 + 'px';
       currentWeek < 12 && circles[currentWeek].classList.remove('active');
       currentWeek > 1 && circles[currentWeek - 2].classList.remove('active');
       circles[currentWeek - 1].classList.add('active');

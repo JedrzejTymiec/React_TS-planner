@@ -37,4 +37,15 @@ export const NavigationWrappper = styled.div`
       background-color: ${(props) => props.theme.grey};
     }
   }
+
+  @media (max-width: 780px) {
+    margin: 20px 0;
+    width: 45%;
+    margin-right: 3%;
+  }
+
+  @media (max-width: 550px) {
+    margin: 10px 0;
+    width: auto;
+  }
 `;
