@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 //Styles
 import { Wrapper } from './style/Navigation.styles';
 
@@ -27,19 +28,19 @@ const Navigation: React.FC = () => {
         <li
           onClick={() => toggleActive(0)}
           className={active[0] ? 'active' : undefined}>
-          <a href="#">DASHBOARD</a>
+          <Link to="/">DASHBOARD</Link>
           <div className="dash"></div>
         </li>
         <li
           onClick={() => toggleActive(1)}
           className={active[1] ? 'active' : undefined}>
-          <a href="#">RECIPES</a>
+          <Link to="/recipes">RECIPES</Link>
           <div className="dash"></div>
         </li>
         <li
           onClick={() => toggleActive(2)}
           className={active[2] ? 'active' : undefined}>
-          <a href="#">CHALLENGE</a>
+          <Link to="/challenge">CHALLENGE</Link>
           <div className="dash"></div>
         </li>
       </ul>
