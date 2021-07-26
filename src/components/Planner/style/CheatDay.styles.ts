@@ -3,57 +3,37 @@ import styled from 'styled-components';
 export const CheatDay = styled.div`
   background-color: #fff;
   flex: 1;
-  border-radius: 0 7px 0 0;
+  border-radius: 0 7px 7px 0;
   cursor: pointer;
 
-  > div {
-    &:first-child {
-      color: ${(props) => props.theme.green};
-      text-transform: uppercase;
-      font-size: 1.3rem;
-      background-color: #fff;
-      border-top: 2px solid transparent;
-      border-left: 2px solid transparent;
-      height: 50px;
-      border-right: 2px solid transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-bottom: 2px solid ${(props) => props.theme.whiteBgBorder};
-      border-radius: 0 7px 0 0;
+  .day-number {
+    color: ${(props) => props.theme.green};
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    background-color: #fff;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    height: 50px;
+    border-right: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid ${(props) => props.theme.whiteBgBorder};
+    border-radius: 0 7px 0 0;
 
-      .day {
-        margin-right: 5px;
-      }
-
-      button {
-        display: none;
-      }
+    .day {
+      margin-right: 5px;
     }
 
-    &:nth-child(2) {
-      height: 458px;
-      border-left: 2px solid transparent;
-      border-right: 2px solid transparent;
+    button {
+      display: none;
     }
+  }
 
-    &:last-child {
-      background-color: #eaeaea;
-      height: 66px;
-      color: ${(props) => props.theme.font};
-      border-radius: 0 0 7px 0;
-      border-left: 2px solid transparent;
-      border-right: 2px solid transparent;
-      border-bottom: 2px solid transparent;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      svg {
-        height: 30px;
-        margin-right: 10px;
-      }
-    }
+  .cheat-day-body {
+    height: 458px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
 
     .cheat-day-text {
       writing-mode: vertical-rl;
@@ -71,6 +51,33 @@ export const CheatDay = styled.div`
       }
       svg {
         margin: 0;
+      }
+    }
+  }
+
+  .print {
+    background-color: #eaeaea;
+    height: 68px;
+    color: ${(props) => props.theme.font};
+    border-radius: 0 0 7px 0;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+
+    svg {
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .print {
+      &:hover {
+        background-color: #e2e2e2;
       }
     }
   }

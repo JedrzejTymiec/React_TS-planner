@@ -3,7 +3,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const FAQ = () => {
   return (
-    <div>
+    <div className="footer-section faq">
       <div>
         <h1>Frequently Asked Questions</h1>
         <p>

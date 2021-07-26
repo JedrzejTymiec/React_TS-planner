@@ -3,7 +3,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const BuyNow = () => {
   return (
-    <div>
+    <div className="footer-section buy-now">
       <div>
         <h1>Running out of products?</h1>
         <p>

@@ -7,7 +7,7 @@ export const FooterWrapper = styled.div`
   justify-content: space-between;
   padding-bottom: 20px;
 
-  > div {
+  .footer-section {
     flex: 1;
     padding: 0 20px;
     margin-right: 20px;
@@ -15,11 +15,11 @@ export const FooterWrapper = styled.div`
     border-right: 1px solid ${(props) => props.theme.greyBgBorder};
     color: ${(props) => props.theme.font};
 
-    &:first-child {
+    &.buy-now {
       padding-left: 0;
     }
 
-    &:last-child {
+    &.faq {
       border-right: none;
       margin-right: 0;
     }
@@ -94,7 +94,7 @@ export const FooterWrapper = styled.div`
     justify-content: center;
     align-items: center;
 
-    > div {
+    .footer-section {
       border-right: none;
       padding: 10px 0;
       width: 80%;
@@ -118,13 +118,13 @@ export const FooterWrapper = styled.div`
         margin-right: 0;
       }
 
-      &:first-child {
+      &.buy-now {
         button {
           min-width: 111.55px;
         }
       }
 
-      &:last-child {
+      &.faq {
         button {
           min-width: 135.55px;
         }

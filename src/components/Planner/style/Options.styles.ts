@@ -45,6 +45,7 @@ export const OptionsWrapper = styled.div`
     .icons {
       svg {
         cursor: pointer;
+
         &:hover {
           transform: scale(1.1);
         }

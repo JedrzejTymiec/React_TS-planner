@@ -8,7 +8,7 @@ type Props = {
 
 const Broccoli: React.FC<Props> = ({ selected, toggle }) => {
   return (
-    <div className="icon broccoli" onClick={toggle}>
+    <div onClick={toggle}>
       {!selected && <div className="strikethrough"></div>}
       <svg
         version="1.0"

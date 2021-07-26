@@ -69,10 +69,10 @@ const DayComponent: React.FC<Props> = ({
       {meals.map((meal) => (
         <MealComponent key={meal.id} meal={meal} toggle={toggleMeal} />
       ))}
-      <div>
+      <div className="carb-container">
         <span className="carb">{carb}-carb</span>
       </div>
-      <div onDoubleClick={toggleTrainig}>
+      <div className="training-container" onDoubleClick={toggleTrainig}>
         <Dumbell training={training} />
         {training && <FontAwesomeIcon icon={faCheck} color="#ff801a" />}
       </div>

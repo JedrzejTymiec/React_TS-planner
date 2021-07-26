@@ -110,13 +110,13 @@ const Week: React.FC<Props> = ({ days, currentWeek }) => {
             <FontAwesomeIcon icon={faChevronRight} />
           </button>
         </div>
-        <div>
+        <div className="cheat-day-body">
           <div className="cheat-day-text">
             <p>GUILT-FREE DAY</p>
             <FontAwesomeIcon icon={faGrin} />
           </div>
         </div>
-        <div>
+        <div className="print">
           <Printer /> Print
         </div>
       </CheatDay>

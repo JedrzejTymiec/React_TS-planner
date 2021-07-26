@@ -5,7 +5,7 @@ import Android from '../SVGComponents/Android';
 
 const MobileApp = () => {
   return (
-    <div>
+    <div className="footer-section mobile">
       <div>
         <h1>Bod•ē Trainer in your poket</h1>
         <p>

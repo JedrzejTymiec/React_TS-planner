@@ -36,18 +36,19 @@ export const WeekWrapper = styled.div`
       > div {
         border-bottom-color: transparent;
 
-        &:first-child {
+        &.day-number {
           justify-content: center;
           border-bottom-color: ${(props) => props.theme.whiteBgBorder};
         }
 
-        &:nth-child(7) {
+        &.carb-container {
           border-bottom-color: ${(props) => props.theme.greyBgBorder};
         }
 
         p {
           display: none;
         }
+
         .day {
           display: none;
         }
@@ -66,19 +67,18 @@ export const WeekWrapper = styled.div`
         flex-direction: column;
         justify-content: space-space-between;
         border-radius: 0 0 7px 0;
-        > div {
-          &:nth-child(2) {
-            border-radius: 0 0 7px 0;
-            flex: 1;
 
-            > div {
-              height: 90%;
-            }
-          }
+        .cheat-day-body {
+          border-radius: 0 0 7px 0;
+          flex: 1;
+        }
 
-          &:last-child {
-            display: none;
-          }
+        .cheat-day-text {
+          height: 90%;
+        }
+
+        .print {
+          display: none;
         }
       }
     }
@@ -90,12 +90,14 @@ export const WeekWrapper = styled.div`
       > div {
         border-bottom-color: ${(props) => props.theme.whiteBgBorder};
 
-        &:nth-child(7) {
+        &.carb-container {
           border-bottom-color: ${(props) => props.theme.greyBgBorder};
         }
+
         p {
           display: block;
         }
+
         .day {
           display: inline;
         }
@@ -109,10 +111,8 @@ export const WeekWrapper = styled.div`
         }
       }
 
-      &.cheat-day > div {
-        &:nth-child(2) {
-          border-bottom: 2px solid ${(props) => props.theme.orange};
-        }
+      &.cheat-day .cheat-day-body {
+        border-bottom: 2px solid ${(props) => props.theme.orange};
       }
     }
   }
@@ -131,19 +131,11 @@ export const WeekWrapper = styled.div`
       &.active {
         display: block;
         width: 100%;
-
-        > div {
-          justify-content: center;
-        }
-
-        span {
-          width: auto;
-        }
       }
     }
 
     .cheat-day.active {
-      > div:nth-child(2) {
+      .cheat-day-body {
         height: 327px;
       }
     }

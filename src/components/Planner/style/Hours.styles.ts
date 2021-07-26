@@ -10,41 +10,38 @@ export const HoursWrapper = styled.div`
     border-color: ${(props) => props.theme.greyBgBorder};
     color: ${(props) => props.theme.font};
 
-    &:first-child {
-      border-color: transparent;
-      border-top: 2px solid transparent;
-      height: 50px;
-      border-right: 2px solid ${(props) => props.theme.whiteBgBorder};
-    }
-
-    &:nth-child(6) {
-      border-bottom: none;
-    }
-
-    &:nth-child(7) {
-      height: 35px;
-    }
-
-    &:last-child {
-      height: 31px;
-      border-bottom: 2px solid transparent;
-    }
-
-    p {
-      margin: 0;
-    }
-
     span {
       font-weight: 700;
       margin-right: 2px;
     }
   }
 
+  .blank-day-row {
+    border-color: transparent;
+    border-top: 2px solid transparent;
+    height: 50px;
+    border-right: 2px solid ${(props) => props.theme.whiteBgBorder};
+  }
+
+  .pm6 {
+    border-bottom: none;
+  }
+
+  .blank-carb-row {
+    height: 35px;
+  }
+
   .workout {
+    height: 31px;
+    border-bottom: 2px solid transparent;
     font-weight: 600;
     font-size: 11px;
     display: flex;
     justify-content: center;
+
+    p {
+      margin: 0;
+    }
 
     svg {
       margin-left: 5px;

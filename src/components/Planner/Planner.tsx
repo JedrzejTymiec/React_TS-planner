@@ -19,7 +19,7 @@ const Planner = () => {
       <NavContainer week={week} setWeek={setWeek} />
       <div className="body">
         <HoursWrapper>
-          <div></div>
+          <div className="blank-day-row"></div>
           <div>
             <p>
               <span>6:00</span>AM
@@ -40,12 +40,12 @@ const Planner = () => {
               <span>3:00</span>PM
             </p>
           </div>
-          <div>
+          <div className="pm6">
             <p>
               <span>6:00</span>PM
             </p>
           </div>
-          <div></div>
+          <div className="blank-carb-row"></div>
           <div className="workout">
             <p>Workout</p>
             <FontAwesomeIcon icon={faCaretRight} />

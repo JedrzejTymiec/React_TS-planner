@@ -6,7 +6,7 @@ export const PlannerWrapper = styled.div`
 
   .body {
     display: flex;
-    height: 580px;
+    height: 582px;
     background-color: ${(props) => props.theme.darkBg};
     border-radius: 7px;
     color: ${(props) => props.theme.greyFont};

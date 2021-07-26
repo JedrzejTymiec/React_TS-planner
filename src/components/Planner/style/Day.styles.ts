@@ -13,6 +13,8 @@ export const DayWrapper = styled.div`
     height: 50px;
     border-right: 2px solid ${(props) => props.theme.whiteBgBorder};
     padding: 0 20px;
+    display: flex;
+    align-items: center;
 
     .day {
       margin-right: 5px;
@@ -29,44 +31,6 @@ export const DayWrapper = styled.div`
 
     &:nth-child(6) {
       border-bottom: none;
-      display: flex;
-      align-items: center;
-    }
-
-    &:nth-child(7) {
-      height: 35px;
-      border-color: ${(props) => props.theme.greyBgBorder};
-      border-right: 2px solid ${(props) => props.theme.greyBgBorder};
-      border-left: 2px solid transparent;
-      color: ${(props) => props.theme.font};
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 600;
-      display: flex;
-      justify-content: center;
-      display: flex;
-      align-items: center;
-    }
-
-    &:last-child {
-      height: 31px;
-      border-bottom: 2px solid transparent;
-      border-right: 2px solid ${(props) => props.theme.greyBgBorder};
-      border-left: 2px solid transparent;
-      border-bottom: 2px solid transparent;
-      color: ${(props) => props.theme.font};
-      display: flex;
-      justify-content: center;
-      transition: 0.2s ease;
-
-      svg {
-        height: 25px;
-      }
-
-      .fa-check {
-        height: 10px;
-        margin-left: 5px;
-      }
     }
 
     p {
@@ -74,15 +38,56 @@ export const DayWrapper = styled.div`
     }
   }
 
+  .carb-container {
+    height: 35px;
+    border-color: ${(props) => props.theme.greyBgBorder};
+    border-right: 2px solid ${(props) => props.theme.greyBgBorder};
+    border-left: 2px solid transparent;
+    color: ${(props) => props.theme.font};
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .training-container {
+    height: 31px;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid ${(props) => props.theme.greyBgBorder};
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    color: ${(props) => props.theme.font};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
+
+    svg {
+      height: 25px;
+    }
+
+    .fa-check {
+      height: 10px;
+      margin-left: 5px;
+    }
+  }
+
   @media (min-width: 1200px) {
     cursor: pointer;
 
-    > div {
-      &:last-child {
-        &:hover {
-          background-color: #e2e2e2;
-        }
+    .training-container {
+      &:hover {
+        background-color: #e2e2e2;
       }
+    }
+  }
+
+  @media (max-width: 955px) {
+    .day-number {
+      padding: 0 15px;
     }
   }
 
