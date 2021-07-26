@@ -6,12 +6,6 @@ export const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 980px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   > div {
     flex: 1;
     padding: 0 20px;
@@ -74,8 +68,20 @@ export const FooterWrapper = styled.div`
         height: 25px;
         display: inline-block;
       }
+    }
+  }
 
+  @media (min-width: 1200px) {
+    button {
       &:hover {
+        background-color: ${(props) => props.theme.grey};
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    button {
+      &:active {
         background-color: ${(props) => props.theme.grey};
       }
     }
@@ -83,6 +89,10 @@ export const FooterWrapper = styled.div`
 
   @media (max-width: 980px) {
     width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     > div {
       border-right: none;
       padding: 10px 0;
