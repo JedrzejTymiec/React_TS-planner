@@ -15,7 +15,7 @@ const Planner = () => {
 
   const { days } = useSelector((state: State) => state.data);
   return (
-    <PlannerWrapper>
+    <PlannerWrapper className="planner-container">
       <NavContainer week={week} setWeek={setWeek} />
       <div className="body">
         <HoursWrapper>

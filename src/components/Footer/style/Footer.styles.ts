@@ -50,7 +50,6 @@ export const FooterWrapper = styled.div`
       margin-right: 20px;
       display: flex;
       align-items: center;
-      cursor: pointer;
       transition: 0.2s ease;
 
       span {
@@ -74,6 +73,7 @@ export const FooterWrapper = styled.div`
 
   @media (min-width: 1200px) {
     button {
+      cursor: pointer;
       &:hover {
         background-color: ${(props) => props.theme.grey};
       }

@@ -7,7 +7,7 @@ import { FooterWrapper } from './style/Footer.styles';
 
 const Footer = () => {
   return (
-    <FooterWrapper>
+    <FooterWrapper className="footer-container">
       <BuyNow />
       <MobileApp />
       <FAQ />
