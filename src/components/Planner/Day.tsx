@@ -49,13 +49,17 @@ const DayComponent: React.FC<Props> = ({
     newData(days);
   };
 
+  console.log(id === 1);
   return (
     <DayWrapper
       className={active ? 'day active' : 'day'}
       onClick={() => toggle(id, mobile)}
       id={id.toString()}>
       <div className="day-number">
-        <button className="prev-btn btn" onClick={() => navigateDay(id, false)}>
+        <button
+          className="prev-btn btn"
+          onClick={() => navigateDay(id, false)}
+          disabled={id === 1}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
         <div>

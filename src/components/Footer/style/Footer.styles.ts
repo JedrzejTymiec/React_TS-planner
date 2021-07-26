@@ -120,13 +120,13 @@ export const FooterWrapper = styled.div`
 
       &.buy-now {
         button {
-          min-width: 111.55px;
+          min-width: 127.55px;
         }
       }
 
       &.faq {
         button {
-          min-width: 135.55px;
+          min-width: 151.55px;
         }
       }
     }

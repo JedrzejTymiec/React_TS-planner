@@ -16,7 +16,7 @@ import { ThemeProvider } from 'styled-components';
 import Navbar from './components/Navbar/Navbar';
 import Planner from './components/Planner/Planner';
 import Footer from './components/Footer/Footer';
-import Page from './components/Footer/Routes/Page';
+import Page from './components/Routes/Page';
 
 const App = () => {
   const dispatch = useDispatch();

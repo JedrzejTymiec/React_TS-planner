@@ -106,6 +106,14 @@ export const DayWrapper = styled.div`
         &:active {
           background-color: ${(props) => props.theme.darkBg};
         }
+
+        &:disabled {
+          color: ${(props) => props.theme.grey};
+
+          &:active {
+            background-color: #fff;
+          }
+        }
       }
     }
   }

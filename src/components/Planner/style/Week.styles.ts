@@ -124,6 +124,28 @@ export const WeekWrapper = styled.div`
   }
 
   @media (max-width: 620px) {
+    .day.active {
+      .day-number {
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        color: ${(props) => props.theme.orange};
+      }
+
+      > div {
+        border-left-color: transparent !important;
+        border-right-color: transparent !important;
+
+        &:last-child {
+          border-bottom-color: transparent;
+        }
+      }
+
+      &.cheat-day .cheat-day-body {
+        border-bottom-color: transparent;
+      }
+    }
+
     .day,
     .day.cheat-day {
       display: none;

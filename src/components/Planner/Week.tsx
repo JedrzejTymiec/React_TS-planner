@@ -106,7 +106,10 @@ const Week: React.FC<Props> = ({ days, currentWeek }) => {
             <span className="day">Day </span>
             <span className="number">{7 + (currentWeek - 1) * 7}</span>
           </div>
-          <button className="next-btn btn" onClick={() => navigateDay(7, true)}>
+          <button
+            className="next-btn btn"
+            onClick={() => navigateDay(7, true)}
+            disabled>
             <FontAwesomeIcon icon={faChevronRight} />
           </button>
         </div>
