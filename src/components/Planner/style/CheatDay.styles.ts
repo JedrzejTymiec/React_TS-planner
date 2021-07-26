@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const CheatDay = styled.div`
-  height: 100%;
   background-color: #fff;
   flex: 1;
   border-radius: 0 7px 0 0;
   cursor: pointer;
 
-  div {
+  > div {
     &:first-child {
       color: ${(props) => props.theme.green};
       text-transform: uppercase;
@@ -25,6 +24,10 @@ export const CheatDay = styled.div`
 
       .day {
         margin-right: 5px;
+      }
+
+      button {
+        display: none;
       }
     }
 
@@ -68,6 +71,25 @@ export const CheatDay = styled.div`
       }
       svg {
         margin: 0;
+      }
+    }
+  }
+
+  @media (max-width: 620px) {
+    .day-number {
+      justify-content: space-evenly !important;
+
+      button {
+        display: block !important;
+        background-color: #fff;
+        border: 1px solid ${(props) => props.theme.border};
+        color: ${(props) => props.theme.font};
+        padding: 10px;
+        border-radius: 7px;
+
+        &:active {
+          background-color: ${(props) => props.theme.darkBg};
+        }
       }
     }
   }

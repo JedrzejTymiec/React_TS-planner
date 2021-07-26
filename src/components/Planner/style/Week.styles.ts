@@ -38,6 +38,11 @@ export const WeekWrapper = styled.div`
 
         &:first-child {
           justify-content: center;
+          border-bottom-color: ${(props) => props.theme.whiteBgBorder};
+        }
+
+        &:nth-child(7) {
+          border-bottom-color: ${(props) => props.theme.greyBgBorder};
         }
 
         p {
@@ -119,7 +124,8 @@ export const WeekWrapper = styled.div`
   }
 
   @media (max-width: 620px) {
-    .day {
+    .day,
+    .day.cheat-day {
       display: none;
 
       &.active {
@@ -134,9 +140,11 @@ export const WeekWrapper = styled.div`
           width: auto;
         }
       }
+    }
 
-      &.cheat-day {
-        display: none;
+    .cheat-day.active {
+      > div:nth-child(2) {
+        height: 327px;
       }
     }
   }

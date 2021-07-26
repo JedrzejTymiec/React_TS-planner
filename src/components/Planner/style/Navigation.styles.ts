@@ -22,19 +22,34 @@ export const NavigationWrappper = styled.div`
     border-radius: 5px;
     background-color: ${(props) => props.theme.appBg};
     transition: background-color 0.2s ease;
-    cursor: pointer;
 
     &:disabled {
       color: ${(props) => props.theme.grey};
       cursor: auto;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .btn {
+      cursor: pointer;
 
       &:hover {
-        background-color: ${(props) => props.theme.appBg};
+        background-color: ${(props) => props.theme.grey};
+      }
+
+      &:disabled {
+        &:hover {
+          background-color: ${(props) => props.theme.appBg};
+        }
       }
     }
+  }
 
-    &:hover {
-      background-color: ${(props) => props.theme.grey};
+  @media (max-width: 1200px) {
+    .btn {
+      &:active {
+        background-color: ${(props) => props.theme.grey};
+      }
     }
   }
 

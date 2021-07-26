@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const DayWrapper = styled.div`
   flex: 1;
-  cursor: pointer;
 
   .day-number {
     color: ${(props) => props.theme.green};
@@ -16,6 +15,10 @@ export const DayWrapper = styled.div`
 
     .day {
       margin-right: 5px;
+    }
+
+    button {
+      display: none;
     }
   }
 
@@ -52,12 +55,7 @@ export const DayWrapper = styled.div`
       color: ${(props) => props.theme.font};
       display: flex;
       justify-content: center;
-      cursor: pointer;
       transition: 0.2s ease;
-
-      &:hover {
-        background-color: #e2e2e2;
-      }
 
       svg {
         height: 25px;
@@ -71,6 +69,38 @@ export const DayWrapper = styled.div`
 
     p {
       margin: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    cursor: pointer;
+
+    > div {
+      &:last-child {
+        cursor: pointer;
+        &:hover {
+          background-color: #e2e2e2;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 620px) {
+    .day-number {
+      justify-content: space-evenly !important;
+
+      button {
+        display: block;
+        background-color: #fff;
+        border: 1px solid ${(props) => props.theme.border};
+        color: ${(props) => props.theme.font};
+        padding: 10px;
+        border-radius: 7px;
+
+        &:active {
+          background-color: ${(props) => props.theme.darkBg};
+        }
+      }
     }
   }
 `;

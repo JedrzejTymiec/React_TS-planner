@@ -7,11 +7,6 @@ export const Wrapper = styled.div`
   align-items: center;
   height: 79px;
 
-  @media (max-width: 550px) {
-    justify-content: center;
-    padding: 10px 0;
-  }
-
   ul {
     margin: 0;
     padding: 0;
@@ -23,14 +18,8 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: space-evenly;
 
-    @media (max-width: 550px) {
-      border: 0;
-      padding: 10px 5px;
-    }
-
     li {
       font-weight: 700;
-      cursor: pointer;
       position: relative;
 
       a {
@@ -49,13 +38,6 @@ export const Wrapper = styled.div`
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
       }
 
-      &:hover {
-        .dash {
-          left: 33%;
-          width: 33%;
-        }
-      }
-
       &.active {
         a {
           color: ${(props) => props.theme.orange};
@@ -66,6 +48,37 @@ export const Wrapper = styled.div`
           left: 33%;
           background: ${(props) => props.theme.orange};
         }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    ul li {
+      cursor: pointer;
+
+      &:hover .dash {
+        left: 33%;
+        width: 33%;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    justify-content: center;
+    padding: 10px 0;
+
+    ul {
+      border: 0;
+      padding: 10px 5px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    ul {
+      flex-direction: column;
+
+      li:nth-child(2) {
+        margin: 10px 0;
       }
     }
   }

@@ -36,9 +36,15 @@ export const OptionsWrapper = styled.div`
 
       svg {
         height: 1.5rem;
-        cursor: pointer;
         transition: transform 0.2s ease;
+      }
+    }
+  }
 
+  @media (min-width: 1200px) {
+    .icons {
+      svg {
+        cursor: pointer;
         &:hover {
           transform: scale(1.1);
         }

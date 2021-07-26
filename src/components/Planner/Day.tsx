@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCheck,
+  faChevronRight,
+  faChevronLeft,
+} from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { daysActions } from '../../state';
@@ -16,14 +20,18 @@ import { DayWrapper } from './style/Day.styles';
 type Props = {
   day: Day;
   currentWeek: number;
-  toggle: (id: number) => void;
+  toggle: (id: number, mobile: boolean) => void;
   active: boolean;
+  mobile: boolean;
+  navigateDay: (id: number, direction: boolean) => void;
 };
 
 const DayComponent: React.FC<Props> = ({
   currentWeek,
   toggle,
   active,
+  mobile,
+  navigateDay,
   day: { meals, training, carb, id },
 }) => {
   const dispatch = useDispatch();
@@ -44,10 +52,19 @@ const DayComponent: React.FC<Props> = ({
   return (
     <DayWrapper
       className={active ? 'day active' : 'day'}
-      onClick={() => toggle(id)}>
+      onClick={() => toggle(id, mobile)}
+      id={id.toString()}>
       <div className="day-number">
-        <span className="day">Day </span>
-        <span className="number">{id + (currentWeek - 1) * 7}</span>
+        <button className="prev-btn btn" onClick={() => navigateDay(id, false)}>
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+        <div>
+          <span className="day">Day </span>
+          <span className="number">{id + (currentWeek - 1) * 7}</span>
+        </div>
+        <button className="next-btn btn" onClick={() => navigateDay(id, true)}>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
       </div>
       {meals.map((meal) => (
         <MealComponent key={meal.id} meal={meal} toggle={toggleMeal} />
