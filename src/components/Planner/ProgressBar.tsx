@@ -8,11 +8,9 @@ type Props = {
 
 const ProgressBar: React.FC<Props> = ({ currentWeek }) => {
   const [circles, setCircles] = useState<NodeListOf<Element> | never[]>([]);
-  const [actives, setActives] = useState<NodeListOf<Element> | never[]>([]);
 
   useEffect(() => {
     setCircles(document.querySelectorAll('.circle'));
-    setActives(document.querySelectorAll('.active'));
   }, []);
 
   useEffect(() => {
@@ -27,7 +25,6 @@ const ProgressBar: React.FC<Props> = ({ currentWeek }) => {
       currentWeek < 12 && circles[currentWeek].classList.remove('active');
       currentWeek > 1 && circles[currentWeek - 2].classList.remove('active');
       circles[currentWeek - 1].classList.add('active');
-      setActives(document.querySelectorAll('.active'));
     }
   }, [currentWeek, circles]);
 

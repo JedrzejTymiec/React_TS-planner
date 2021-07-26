@@ -17,8 +17,8 @@ const MealComponent: React.FC<Props> = ({
 }) => {
   return (
     <MealWrapper onDoubleClick={() => toggle(id)}>
-      <p>{name}</p>
       {eaten && <CheckMeal />}
+      <p>{name}</p>
     </MealWrapper>
   );
 };

@@ -5,6 +5,7 @@ export const FooterWrapper = styled.div`
   margin: 2rem auto;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 20px;
 
   > div {
     flex: 1;

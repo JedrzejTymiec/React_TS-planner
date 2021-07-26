@@ -36,7 +36,7 @@ const Week: React.FC<Props> = ({ days, currentWeek }) => {
     window.addEventListener('resize', () => {
       window.innerWidth < 620 ? setMobile(true) : setMobile(false);
     });
-  });
+  }, []);
 
   const toggleActive = (id: number, mobile: boolean) => {
     if (!mobile) {

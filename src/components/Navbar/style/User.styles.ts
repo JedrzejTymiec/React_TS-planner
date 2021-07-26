@@ -7,11 +7,6 @@ export const Wrapper = styled.div`
   align-items: center;
   height: 79px;
 
-  @media (max-width: 550px) {
-    justify-content: center;
-    padding: 10px 0;
-  }
-
   img {
     margin-right: 0.5rem;
     border-radius: 50px;
@@ -25,5 +20,10 @@ export const Wrapper = styled.div`
 
   svg {
     margin: 0 0.5rem;
+  }
+
+  @media (max-width: 550px) {
+    justify-content: center;
+    padding: 10px 0;
   }
 `;

@@ -12,6 +12,7 @@ export const DayWrapper = styled.div`
     border-left: 2px solid transparent;
     height: 50px;
     border-right: 2px solid ${(props) => props.theme.whiteBgBorder};
+    padding: 0 20px;
 
     .day {
       margin-right: 5px;
@@ -23,14 +24,13 @@ export const DayWrapper = styled.div`
   }
 
   > div {
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
     border-bottom: 2px solid transparent;
     border-color: ${(props) => props.theme.whiteBgBorder};
 
     &:nth-child(6) {
       border-bottom: none;
+      display: flex;
+      align-items: center;
     }
 
     &:nth-child(7) {
@@ -44,6 +44,8 @@ export const DayWrapper = styled.div`
       font-weight: 600;
       display: flex;
       justify-content: center;
+      display: flex;
+      align-items: center;
     }
 
     &:last-child {
@@ -77,7 +79,6 @@ export const DayWrapper = styled.div`
 
     > div {
       &:last-child {
-        cursor: pointer;
         &:hover {
           background-color: #e2e2e2;
         }
