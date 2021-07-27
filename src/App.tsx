@@ -1,10 +1,5 @@
 import { useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  RouteComponentProps,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { daysActions } from './state';
 import { optionsActions } from './state';
 import { useDispatch } from 'react-redux';

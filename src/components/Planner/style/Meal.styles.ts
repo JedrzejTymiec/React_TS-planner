@@ -8,6 +8,7 @@ export const MealWrapper = styled.div`
   font-size: 13px;
   position: relative;
   transition: 0.2s ease;
+  overflow: hidden;
 
   p {
     padding: 10px;
@@ -18,6 +19,16 @@ export const MealWrapper = styled.div`
     width: 25px;
     float: right;
     color: ${(props) => props.theme.orange};
+  }
+
+  img {
+    width: 70%;
+    position: absolute;
+    top: 30%;
+    filter: grayscale(70%);
+    transition: filter 0.3s ease-in;
+    display: block;
+    margin-left: 20px;
   }
 
   @media (min-width: 1200px) {

@@ -49,7 +49,6 @@ const DayComponent: React.FC<Props> = ({
     newData(days);
   };
 
-  console.log(id === 1);
   return (
     <DayWrapper
       className={active ? 'day active' : 'day'}

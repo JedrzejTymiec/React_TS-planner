@@ -1,4 +1,5 @@
 import React from 'react';
+import shakePic from '../../images/lyxshake-vanilla-2021.png';
 //Types
 import { Meal } from '../../state/types/days';
 //Components
@@ -16,9 +17,10 @@ const MealComponent: React.FC<Props> = ({
   meal: { name, eaten, id },
 }) => {
   return (
-    <MealWrapper onDoubleClick={() => toggle(id)}>
+    <MealWrapper onDoubleClick={() => toggle(id)} className="meal">
       {eaten && <CheckMeal />}
       <p>{name}</p>
+      {name === 'Bod•ē Shake' && <img src={shakePic} alt="shake" />}
     </MealWrapper>
   );
 };

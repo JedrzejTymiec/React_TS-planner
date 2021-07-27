@@ -14,6 +14,10 @@ export const WeekWrapper = styled.div`
       color: ${(props) => props.theme.orange};
     }
 
+    .meal img {
+      filter: none;
+    }
+
     > div {
       border-left-color: ${(props) => props.theme.orange} !important;
       border-right-color: ${(props) => props.theme.orange} !important;
@@ -39,6 +43,10 @@ export const WeekWrapper = styled.div`
         &.day-number {
           justify-content: center;
           border-bottom-color: ${(props) => props.theme.whiteBgBorder};
+        }
+
+        &.meal img {
+          display: none;
         }
 
         &.carb-container {
@@ -90,6 +98,13 @@ export const WeekWrapper = styled.div`
       > div {
         border-bottom-color: ${(props) => props.theme.whiteBgBorder};
 
+        &.meal img {
+          display: block;
+          width: 30%;
+          right: 10%;
+          top: 5px;
+        }
+
         &.carb-container {
           border-bottom-color: ${(props) => props.theme.greyBgBorder};
         }
@@ -120,6 +135,10 @@ export const WeekWrapper = styled.div`
   @media (max-width: 725px) {
     .day.active {
       width: 200px;
+
+      > div.meal img {
+        top: 15px;
+      }
     }
   }
 
@@ -130,6 +149,10 @@ export const WeekWrapper = styled.div`
         border-left-color: transparent;
         border-right-color: transparent;
         color: ${(props) => props.theme.orange};
+      }
+
+      > div.meal img {
+        width: 10%;
       }
 
       > div {
