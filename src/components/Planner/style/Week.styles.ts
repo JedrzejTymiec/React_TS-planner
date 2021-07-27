@@ -152,7 +152,7 @@ export const WeekWrapper = styled.div`
       }
 
       > div.meal img {
-        width: 10%;
+        width: 50px;
       }
 
       > div {
