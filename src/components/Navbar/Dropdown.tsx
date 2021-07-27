@@ -3,7 +3,7 @@ import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 ///Style
 import { DropdownWrapper } from './style/Dropdown.styles';
 
-const Dropdown = () => {
+const Dropdown: React.FC = () => {
   return (
     <DropdownWrapper>
       <li className="settings">Settings</li>

@@ -3,7 +3,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faApple } from '@fortawesome/free-brands-svg-icons';
 import Android from '../SVGComponents/Android';
 
-const MobileApp = () => {
+const MobileApp: React.FC = () => {
   return (
     <div className="footer-section mobile">
       <div>

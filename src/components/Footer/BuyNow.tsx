@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-const BuyNow = () => {
+const BuyNow: React.FC = () => {
   return (
     <div className="footer-section buy-now">
       <div>

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-const FAQ = () => {
+const FAQ: React.FC = () => {
   return (
     <div className="footer-section faq">
       <div>

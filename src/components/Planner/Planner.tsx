@@ -10,7 +10,7 @@ import Week from './Week';
 import { PlannerWrapper } from './style/Planner.styles';
 import { HoursWrapper } from './style/Hours.styles';
 
-const Planner = () => {
+const Planner: React.FC = () => {
   const [week, setWeek] = useState<number>(7);
 
   const { days } = useSelector((state: State) => state.data);

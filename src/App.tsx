@@ -13,7 +13,7 @@ import Planner from './components/Planner/Planner';
 import Footer from './components/Footer/Footer';
 import Page from './components/Routes/Page';
 
-const App = () => {
+const App: React.FC = () => {
   const dispatch = useDispatch();
 
   const { setData } = bindActionCreators(daysActions, dispatch);

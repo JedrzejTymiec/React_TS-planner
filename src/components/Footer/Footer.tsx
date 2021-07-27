@@ -5,7 +5,7 @@ import FAQ from './FAQ';
 //Styles
 import { FooterWrapper } from './style/Footer.styles';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <FooterWrapper className="footer-container">
       <BuyNow />

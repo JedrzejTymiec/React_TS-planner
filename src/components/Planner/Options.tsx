@@ -13,7 +13,7 @@ import { OptionsWrapper } from './style/Options.styles';
 
 export type Toggle = () => void;
 
-const Options = () => {
+const Options: React.FC = () => {
   const dispatch = useDispatch();
 
   const { newOptions } = bindActionCreators(optionsActions, dispatch);
